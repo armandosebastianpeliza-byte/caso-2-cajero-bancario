@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Caso 2 - Cajero Bancario</title>
+    <style> table td { text-align: center; padding: 5px; } </style>
+</head>
+<body>
+    <h4>Caso 2: Simulador de Cajero Bancario</h4>
+    <p><b>Saldo Inicial: $0.00</b></p>
+
+    <table border="1">
+        <thead>
+            <tr><td colspan="2">Tipos de Movimiento</td></tr>
+            <tr><td>Tipo</td><td>Descripción</td></tr>
+        </thead>
+        <tbody>
+            <tr><td>Depósito</td><td>Ingresa dinero</td></tr>
+            <tr><td>Retiro</td><td>Saca dinero</td></tr>
+        </tbody>
+    </table>
+    <br>
+
+    <table>
+        <tbody>
+            <tr>
+                <td>Tipo:</td>
+                <td>
+                    <select id="select-tipo">
+                        <option value="0">Deposito</option>
+                        <option value="1">Retiro</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Monto:</td>
+                <td><input type="number" id="id-monto" size="5" min="1" step="1" value="1"></td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+
+    <table id="id-table-movimientos" border="1">
+        <thead>
+            <tr><td colspan="4">Detalle de Movimientos</td></tr>
+            <tr><td>Tipo</td><td>Monto</td><td>Estado</td><td>Acción</td></tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2"><button id="btn-agregar-movimiento">Agregar Movimiento</button></td>
+                <td colspan="2"><button id="btn-vaciar-movimientos">Vaciar Movimientos</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button id="btn-calcular-movimientos">Calcular Movimientos</button></td>
+                <td colspan="2"><button id="btn-presentar-movimientos">Presentar Movimientos</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button id="btn-mayor">Mayor</button></td>
+                <td colspan="2"><button id="btn-menor">Menor</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button id="btn-promedio">Promedio</button></td>
+                <td colspan="2"><button id="btn-mediana">Mediana</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button id="btn-moda">Moda</button></td>
+                <td colspan="2"><button id="btn-ordenar-insercion">Ordenar Insercion</button></td>
+            </tr>
+            <tr><td colspan="4"><button id="btn-rotar-derecha">Rotar Derecha</button></td></tr>
+        </tfoot>
+    </table>
+    <hr>
+    <table>
+        <thead><tr><td colspan="2">Resultado del Cajero </td></tr></thead>
+        <tbody>
+            <tr>
+                <td>Resultado:</td>
+                <td><textarea id="id-txt-respuesta" rows="10" cols="80"></textarea></td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="./js/app.js"></script>
+</body>
+</html>
